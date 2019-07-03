@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box; 
+    font-family: 'Lato', sans-serif;
+
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right bottom, #29AB88, rgba(21, 124, 115, 0.863)), url('images/1.JPG');
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 20vh 5% 0;
+}
+
+.heading{
+    font-size: 1800%;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    animation: move-in-top 2s ease;
+}
+
+.heading-secondary{
+    font-size: 5rem;
+    display: block;
+    margin: 0 auto 5% auto;
+    color: #10284E;
+    animation: move-in-right 2s ease 2s backwards;
+
+}
+
+.button:link, .button:visited{
+    border: 3px solid #10284E;
+    border-radius: 1rem;
+    padding: 2%;
+    margin: 1rem auto;
+    display: block;
+    width: 250px;
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #10284E;
+    background-color: #fff;
+    animation: move-in-bottom 2s ease 4s backwards;
+
+}
+
+.button:hover{
+    border: 3px solid #fff;
+    transform: translateY(-0.3rem);
+    color: #fff;
+    background-color: #10284E;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.322);
+}
+
+.button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.button:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.342);
+}
+
+@keyframes move-in-right{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+        transform: translateX(1rem);
+
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes move-in-top{
+    0%{
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    80%{
+        transform: translateY(1rem);
+
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes move-in-bottom{
+    0%{
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    80%{
+        transform: translateY(-2rem);
+
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+
+    }
+}
