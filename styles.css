@@ -30,7 +30,7 @@ body {
     color: #fff;
     display: block;
     margin: 0 auto;
-    animation: move-in-top 2s ease;
+    animation: appear 2s ease 4s backwards;
 }
 
 .heading-secondary{
@@ -38,7 +38,7 @@ body {
     display: block;
     margin: 0 auto 5% auto;
     color: #10284E;
-    animation: move-in-right 2s ease 2s backwards;
+    animation: move-in-right 2s ease backwards;
 
 }
 
@@ -54,7 +54,7 @@ body {
     text-decoration: none;
     color: #10284E;
     background-color: #fff;
-    animation: move-in-bottom 2s ease 4s backwards;
+    animation: move-in-bottom 2s ease 2s backwards;
 
 }
 
@@ -91,18 +91,15 @@ body {
     }
 }
 
-@keyframes move-in-top{
+@keyframes appear{
     0%{
         opacity: 0;
-        transform: translateY(-10rem);
     }
     80%{
-        transform: translateY(1rem);
 
     }
     100%{
         opacity: 100%;
-        transform: translateY(0);
 
     }
 }
